@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.jpg">
+    <title>Anish Pillai</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3f2607377c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+            </nav>
+            <div class="header-text">
+                <p>Software Developer/ Innovator</p>
+                <h1><span>Hello</span>, I'm<br> <span>Anish Pillai</span><br> from India</h1>
+            </div>
+        </div>
+        <img src="Images/Profile.jpg" class="Profile-pic">
+    </div>
+<!--------------------------About Section---------------------------------------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img src="Images/Aboutme.jpeg">
+
+                </div>
+                <div class="aboutcol2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p> </p>
+
+                    <div class="titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Design application interface</li>
+                            <li><span>App Development</span><br>Flutter Developer</li>
+                            <li><span>Business Analysis</span><br>Finds Effective Business Solutions </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021-present</span><br>Developing products for better Healthcare</li>
+                            <li><span>2021-present</span><br>Researching on Startups</li>
+                            <li><span>2022-Present</span><br> Thinker Hub Content Team</li>  
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br> Model Engineering College</li>
+                            <li><span>2017-2021</span><br>Sree Sarada Vidyalaya</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+<!----------------------------Services---------------------------------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-titles">My Services</h1>
+            <div class="services-list">
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I develop beautiful websites,with good user interface</p>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-android"></i>
+
+                    <h2>Android Development</h2>
+                    <p>I develop user friendly android apps using Flutter.</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h2>Product Management</h2>
+                    <p>Planning, developing, launching, and managing a product or service on a larger scale</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+<!------------Contact ----------------------->
+
+<div id="contact">
+    <div class="container">
+
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="Subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>anishpillai2002@gmail.com</p>
+                <div class="social-icon">
+                    <a href="https://www.instagram.com/anish___2002/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/anish-pillai2002/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/anish.pillai.12382/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="10" placeholder="Your Message" ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+                <span id="msg"></span>
+
+            </div>
+        </div>
+
+        <div class="copyright">
+           <p>Copyright <i class="fa-regular fa-copyright"></i> 2022| Built by Anish <i class="fa-brands fa-bitcoin"></i></p> 
+           
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<!----JS for hidint content of About Me section on click--------->
+<script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove('active-link');
+        }
+        for(tabsontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+        }
+    event.currentTarget.classList.add('active-link');
+    document.getElementById(tabname).classList.add("active-tab");
+       
+    }
+</script>
+
+
+<!----------JS for Form------------------------>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx4ZydEZZ_LgX-xTRAteMoJoGdKOS7RBAwzqZewa7tKVgykFA6KUJH0oERlmyv0n3d9xQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+
+</html>
